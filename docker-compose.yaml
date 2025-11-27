@@ -8,7 +8,7 @@ services:
             KAFKA_BROKERCONNECT: "kafka-server-1:9091,kafka-server-2:9091,kafka-server-3:9091"
     kafka-server-1:
         hostname: kafka-server-1
-        image: kafka-base-img:v0
+        image: loind31/kafka-base-img:v0
         volumes:
             - ./config/cluster.id:/cluster.id
             - ./config/server-1:/workspace/kafka/config
@@ -20,7 +20,7 @@ services:
         command: ["/entrypoint.sh"]
     kafka-server-2:
         hostname: kafka-server-2
-        image: kafka-base-img:v0
+        image: loind31/kafka-base-img:v0
         volumes:
             - ./config/cluster.id:/cluster.id
             - ./config/server-2:/workspace/kafka/config
@@ -32,7 +32,7 @@ services:
         command: ["/entrypoint.sh"]
     kafka-server-3:
         hostname: kafka-server-3
-        image: kafka-base-img:v0
+        image: loind31/kafka-base-img:v0
         volumes:
             - ./config/cluster.id:/cluster.id
             - ./config/server-3:/workspace/kafka/config
